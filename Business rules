@@ -1,0 +1,21 @@
+AUTH:
+  All requests need header: X-API-Key = API_KEY env var
+
+RISK GATE (checked on every signal request):
+  1. equity <= 30 → max 1 position, 0.5% risk, 3% daily stop
+  2. equity >  30 → max 2 positions, 1.0% risk, 5% daily stop
+  3. consecutive losses >= 3 → cooldown (60 min, low tier)
+  4. daily pnl% <= -stop_pct → block all new trades
+
+SIGNAL FLOW:
+  1. Check mode (ADVISOR → always NO_ACTION)
+  2. Check symbol match
+  3. Check risk gate
+  4. Parse candles from query params
+  5. Run strategy (playbook 1 first, then 2 if low confidence)
+  6. Save signal to DB
+  7. Return signal JSON
+
+EVENT FLOW:
+  On CLOSED event → update daily_stats realized_pnl
+                  → update consecutive_losses counter
