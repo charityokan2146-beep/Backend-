@@ -1,0 +1,8 @@
+server/
+├── main.py
+├── config.py
+├── db.py
+├── strategy.py
+├── schemas.py
+├── symbols.yaml
+└── requirements.txt
