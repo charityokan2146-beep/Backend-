@@ -1,0 +1,57 @@
+active_symbol: "Volatility 75 Index"
+active_broker: deriv
+mode: DEMO   # ADVISOR | PAPER | DEMO
+
+symbols:
+  - name: "Volatility 75 Index"
+    enabled: true
+    direction_lock: null
+    volume_min: 0.01
+    volume_step: 0.001
+    stop_level_hint: 10770
+    digits: 2
+
+  - name: "Boom 1000 Index"
+    enabled: true
+    direction_lock: LONG
+    volume_min: 0.2
+    volume_step: 0.01
+    stop_level_hint: 26160
+    digits: 2
+
+  - name: "Crash 1000 Index"
+    enabled: true
+    direction_lock: SHORT
+    volume_min: 0.2
+    volume_step: 0.01
+    stop_level_hint: 7620
+    digits: 2
+
+  - name: "EURUSD"
+    enabled: true
+    direction_lock: null
+    volume_min: 0.01
+    volume_step: 0.01
+    stop_level_hint: 20
+    digits: 5
+
+risk:
+  tier_low:              # equity <= $30
+    max_positions: 1
+    risk_pct: 0.5
+    daily_loss_stop_pct: 3.0
+    consec_loss_limit: 3
+    cooldown_minutes: 60
+  tier_high:             # equity > $30
+    max_positions: 2
+    risk_pct: 1.0
+    daily_loss_stop_pct: 5.0
+
+strategy:
+  atr_period: 14
+  atr_mult_sl: 1.5
+  swing_lookback: 20
+  tp1_r: 1.0
+  tp2_r: 2.0
+  min_confidence: 40
+  be_move_at_r: 1.0
