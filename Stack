@@ -1,0 +1,1 @@
+fastapi, uvicorn, pydantic, pyyaml, sqlite3, python-multipart, aiofiles
