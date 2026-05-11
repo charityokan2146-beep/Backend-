@@ -1,0 +1,6 @@
+- M15: price breaks swing high/low from last 20 candles
+- Last candle retests level within 0.3×ATR
+- M5:  rejection candle confirms
+- H1:  price on correct side of EMA20 (+10pts)
+- SL:  retest candle wick + 1.5×ATR
+- confidence points: breakout=20, retest=25, M5=15, H1=10
