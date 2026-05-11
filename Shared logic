@@ -1,0 +1,10 @@
+# Direction lock enforcement
+if direction_lock == "LONG" and signal == "SELL": return NO_ACTION
+if direction_lock == "SHORT" and signal == "BUY": return NO_ACTION
+
+# Confidence gate
+if confidence < min_confidence: return NO_ACTION
+
+# TP-first probability (heuristic)
+base = {TREND: 0.55, RANGE: 0.48, CHOP: 0.38}
+tp_first_prob = base + (confidence - 50) * 0.002
