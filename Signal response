@@ -1,0 +1,20 @@
+{
+  "action": "OPEN_TRADE | NO_ACTION",
+  "signal_id": "abc123",
+  "symbol": "Volatility 75 Index",
+  "direction": "BUY | SELL",
+  "entry_type": "MARKET",
+  "sl": 1234.50,
+  "tp1": 1240.00,
+  "tp2": 1245.50,
+  "risk_pct": 0.5,
+  "confidence": 65,
+  "regime": "TREND",
+  "playbook": "trend_pullback",
+  "tp_first_prob": 0.57,
+  "trailing_enabled": true,
+  "move_be_at_r": 1.0,
+  "reasons": ["H1 trend BUY", "Pullback confirmed"],
+  "server_mode": "DEMO",
+  "reject_reason": null
+}
