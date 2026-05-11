@@ -1,6 +1,0 @@
-- H1: EMA20 > EMA50 = bullish, else bearish
-- M15: price within 0.5×ATR of EMA20 = pullback zone
-- M5:  last candle confirms direction
-- SL:  swing low/high + 1.5×ATR
-- TP1: entry + 1R, TP2: entry + 2R
-- confidence points: trend=20, pullback=20, M5=15, slope=10
