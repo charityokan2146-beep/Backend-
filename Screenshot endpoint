@@ -1,0 +1,4 @@
+- Save file to storage/uploads/
+- Log to screenshot_log table
+- Return fixed NO_TRADE response
+- No OCR in v1
